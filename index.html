@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IP Threat Intelligence Tool</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>🌐 IP Threat Intelligence</h1>
+<button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button> 
+ <button onclick="getMyIP()">📍 Show My IP</button>
+
+  <div class="search-box">
+    <input type="text" id="ipInput" placeholder="Enter IP (e.g. 8.8.8.8)">
+    <button onclick="checkIP()">Analyze</button>
+  </div>
+
+  <div id="loader" class="loader hidden"></div>
+
+  <div id="result" class="card"></div>
+
+  <div id="map"></div>
+
+  <div class="history">
+    <h3>Recent Searches</h3>
+    <ul id="historyList"></ul>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
